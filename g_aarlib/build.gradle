@@ -1,6 +1,5 @@
 apply plugin: 'groovy'
 apply plugin: 'maven'
-
 dependencies {
     implementation localGroovy()
     implementation gradleApi()
@@ -12,3 +11,35 @@ dependencies {
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+        google()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+        maven { url 'https://oss.sonatype.org/content/groups/public/' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.1'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+ext {
+    publishedGroupId = 'G_aar'
+    artifact = 'g-aar'
+    publishedVersion = "0.0.1"
+    libraryDescription = 'A Robolectric Plugin for android unit'
+}
+
+apply from: '../bintray.gradle'
