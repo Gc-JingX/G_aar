@@ -1,4 +1,4 @@
-package com.cpdroid.fat_aar
+package com.garyliang.aar
 
 import com.android.ide.common.symbols.*
 

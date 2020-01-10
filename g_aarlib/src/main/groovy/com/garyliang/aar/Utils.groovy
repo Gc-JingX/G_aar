@@ -1,4 +1,4 @@
-package com.cpdroid.fat_aar
+package com.garyliang.aar
 
 import com.android.SdkConstants
 import com.android.build.gradle.internal.LoggerWrapper
@@ -133,7 +133,7 @@ class Utils {
             ILogger mLogger = new LoggerWrapper(Logging.getLogger(Task.class))
 
             Invoker manifestMergerInvoker = ManifestMerger2.newMerger(mainManifestFile, mLogger, MergeType.APPLICATION)
-            manifestMergerInvoker.addLibraryManifests(libraryManifests.toArray(new File[libraryManifests.size()]))
+            manifestMergerInvoker.addLibraryManifests(libraryManifests.toArray(new File[libraryManifests.size()]) as File)
             manifestMergerInvoker.setMergeReportFile(reportFile)
 
             MergingReport mergingReport = manifestMergerInvoker.merge()

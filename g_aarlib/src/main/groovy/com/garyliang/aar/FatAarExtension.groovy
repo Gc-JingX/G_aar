@@ -1,4 +1,4 @@
-package com.cpdroid.fat_aar
+package com.garyliang.aar
 
 import groovy.transform.CompileStatic
 
