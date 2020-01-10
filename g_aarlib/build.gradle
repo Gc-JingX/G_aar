@@ -37,8 +37,13 @@ allprojects {
 ext {
     publishedGroupId = 'G_aar'
     artifact = 'g-aar'
-    publishedVersion = "0.0.1"
+    publishedVersion = "0.0.2"
     libraryDescription = 'A Robolectric Plugin for android unit'
+    siteUrl = 'https://github.com/Lguocai/G_aar'
+    gitUrl = 'https://github.com/Lguocai/G_aar.git'
+    developerId = 'GaryLiang'
+    developerName = 'GaryLiang'
+    developerEmail = '595184932@qq.com'
 }
 
 apply from: '../bintray.gradle'
