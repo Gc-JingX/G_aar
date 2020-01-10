@@ -1,5 +1,5 @@
 //publish to jcenter
-apply plugin: 'maven'
+apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 group = publishedGroupId                               // Maven Group ID for the artifact
 
